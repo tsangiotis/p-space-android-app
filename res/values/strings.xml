@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="label">Status Changer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_status_changer">P-Space Status</string>
+    <string name="change_button">Change Status</string>
+    <string name="check">Check Now!</string>
+    <string name="status_text"/>
+    <string name="logo">P-Space Logo</string>
+
+</resources>
