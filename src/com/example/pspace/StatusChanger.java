@@ -1,10 +1,11 @@
 package com.example.pspace;
 
-//import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,11 +30,24 @@ int status = -1;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_status_changer);
+		setContentView(R.layout.activity_status_changer);  //create view
 		
-		StatusCheck statusCheck = new StatusCheck();
-		statusCheck.execute("http://www.p-space.gr/statustest/");
-								
+		int delay = 0;
+		int period = 5000;
+		
+		Timer timer = new Timer();
+		//check status of p-space now
+		timer.scheduleAtFixedRate(new TimerTask() {
+
+			public void run() {
+
+				StatusCheck statusCheck = new StatusCheck();
+				statusCheck.execute("http://www.p-space.gr/status/");
+			}
+			
+		}, delay, period);
+		
+		//create the button that change code
 		final Button change_button = (Button) findViewById(R.id.button1);
 		change_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -41,32 +55,24 @@ int status = -1;
 				StatusSelect();
 			}
 		});
-		
-		final Button check_button = (Button) findViewById(R.id.button2);
-		check_button.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				
-				StatusCheck statusCheck = new StatusCheck();
-				statusCheck.execute("http://www.p-space.gr/statustest/");
-			}
-		});
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_status_changer, menu);
-		return true;
+		return false;
 	}
 	
-	public void StatusSelect(){
+	public void StatusSelect(){ //uses a switch to control if change 
+								 //status-button results to on or off
 		switch (status){
 		case 0:
 			//Open
-			new StatusChange().execute("http://www.p-space.gr/statustest/set.php?open");
+			new StatusChange().execute("http://www.p-space.gr/status/set.php?open");
 			break;
 		case 1:
 			//Close
-			new StatusChange().execute("http://www.p-space.gr/statustest/set.php?close");
+			new StatusChange().execute("http://www.p-space.gr/status/set.php?close");
 			break;
 		}
 	}
@@ -77,7 +83,7 @@ int status = -1;
 			
 			String url = params[0];
 			AndroidHttpClient client = AndroidHttpClient
-					.newInstance("pspace_android");
+					.newInstance("pspace_android"); //start server
 			HttpPost httppost = new HttpPost(url);
 			
 
@@ -101,9 +107,7 @@ int status = -1;
 				}
 
 			} catch (ClientProtocolException e) {
-				// TODO Auto-generated catch block
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			return null;
@@ -112,7 +116,7 @@ int status = -1;
 		protected void onPostExecute(Void result) {
 
 			StatusCheck statusCheckinChecker = new StatusCheck();
-			statusCheckinChecker.execute("http://www.p-space.gr/statustest/");
+			statusCheckinChecker.execute("http://www.p-space.gr/status/");
 
 		}
 	}
@@ -133,7 +137,7 @@ int status = -1;
 
 				switch (response.getStatusLine().getStatusCode()) {
 
-				case 200:			//TODO check this http 200 !
+				case 200:
 					return Integer.valueOf(EntityUtils.toString(response
 							.getEntity()));
 
