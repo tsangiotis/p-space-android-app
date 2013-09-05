@@ -50,6 +50,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         textStatus = (TextView)findViewById(R.id.textStatus);
 
+        restorePreferences();
+
         //Start MyIntentService
         Intent statusIntent = new Intent(this, StatusService.class);
         startService(statusIntent);
@@ -75,7 +77,6 @@ public class MainActivity extends Activity {
             }
         });
 
-        restorePreferences();
     }
 
     private void restorePreferences(){
@@ -83,6 +84,14 @@ public class MainActivity extends Activity {
                 "com.pspace.gr", Context.MODE_PRIVATE);
         notificationState = settings.getBoolean("NOTIF", true);
         testMenu = settings.getBoolean("TEST", false);
+
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem test = menu.findItem(R.id.testmenu);
+        test.setChecked(testMenu);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
