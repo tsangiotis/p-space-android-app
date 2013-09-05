@@ -3,9 +3,5 @@
         android:icon="@drawable/ic_menu_notifications"
         android:title="@string/notif_onoff"
         android:showAsAction="always" />
-    <item android:id="@+id/testmenu"
-        android:title="@string/testmenu"
-        android:checkable="true"
-        android:showAsAction="never" />
 
 </menu>

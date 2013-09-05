@@ -40,7 +40,6 @@ public class StatusService extends IntentService {
 
     private SharedPreferences settings;
     boolean notificationState;
-    boolean testMenu;
 
     int delay = 0;
     int period = 5000;
@@ -73,10 +72,7 @@ public class StatusService extends IntentService {
         AndroidHttpClient client = AndroidHttpClient
                 .newInstance("pspace_android");
         HttpGet request;
-        if(testMenu)
-            request = new HttpGet(getResources().getString(R.string.testpspaceurl));
-        else
-            request = new HttpGet(getResources().getString(R.string.pspaceurl));
+        request = new HttpGet(getResources().getString(R.string.pspaceurl));
 
         HttpResponse response = null;
 
@@ -123,7 +119,6 @@ public class StatusService extends IntentService {
         settings = getSharedPreferences(
                 "com.pspace.gr", Context.MODE_PRIVATE);
         notificationState = settings.getBoolean("NOTIF", true);
-        testMenu = settings.getBoolean("TEST", false);
     }
 
     public boolean isForeground(String myPackage){

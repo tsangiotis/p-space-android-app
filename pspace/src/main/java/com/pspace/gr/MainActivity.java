@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
 
     int status;
     boolean notificationState;
-    boolean testMenu;
 
     TextView textStatus;
 
@@ -83,14 +82,11 @@ public class MainActivity extends Activity {
         settings = getSharedPreferences(
                 "com.pspace.gr", Context.MODE_PRIVATE);
         notificationState = settings.getBoolean("NOTIF", true);
-        testMenu = settings.getBoolean("TEST", false);
 
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem test = menu.findItem(R.id.testmenu);
-        test.setChecked(testMenu);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -116,14 +112,6 @@ public class MainActivity extends Activity {
                     item.setIcon(R.drawable.ic_menu_notifications);
                 }
                 return true;
-            case R.id.testmenu:
-                testMenu ^=true;
-                if(testMenu)
-                    item.setChecked(true);
-                else
-                    item.setChecked(false);
-                saveTest();
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -143,20 +131,10 @@ public class MainActivity extends Activity {
         editor.commit();
     }
 
-    private void saveTest() {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("TEST", testMenu);
-        editor.commit();
-    }
-
-
     public void StatusSelect(){ //uses a switch to control if change
         //status-button results to on or off
         String url;
-        if(testMenu)
-            url = getString(R.string.testpspaceurl);
-        else
-            url = getString(R.string.pspaceurl);
+        url = getString(R.string.pspaceurl);
 
         switch (status){
             case 0:
