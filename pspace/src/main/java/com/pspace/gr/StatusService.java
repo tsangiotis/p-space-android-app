@@ -7,6 +7,7 @@ import android.app.NotificationManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.http.AndroidHttpClient;
@@ -37,6 +38,10 @@ public class StatusService extends IntentService {
     int notifyid = -1;
     NotificationManager mNM;
 
+    private SharedPreferences settings;
+    boolean notificationState;
+    boolean testMenu;
+
     int delay = 0;
     int period = 5000;
 
@@ -64,9 +69,15 @@ public class StatusService extends IntentService {
     }
 
     public void checkStatus(){
+        restorePreferences();
         AndroidHttpClient client = AndroidHttpClient
                 .newInstance("pspace_android");
-        HttpGet request = new HttpGet("http://p-space.gr/statustest/");
+        HttpGet request;
+        if(testMenu)
+            request = new HttpGet(getResources().getString(R.string.testpspaceurl));
+        else
+            request = new HttpGet(getResources().getString(R.string.pspaceurl));
+
         HttpResponse response = null;
 
         try {
@@ -108,6 +119,13 @@ public class StatusService extends IntentService {
         }
     }
 
+    private void restorePreferences(){
+        settings = getSharedPreferences(
+                "com.pspace.gr", Context.MODE_PRIVATE);
+        notificationState = settings.getBoolean("NOTIF", true);
+        testMenu = settings.getBoolean("TEST", false);
+    }
+
     public boolean isForeground(String myPackage){
         ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         List< ActivityManager.RunningTaskInfo > runningTaskInfo = manager.getRunningTasks(1);
@@ -124,13 +142,13 @@ public class StatusService extends IntentService {
         CharSequence text;
 
         if (status == 0) {
-            text = "Status: CLOSE";
+            text = "P-Space just closed...";
             mNM.cancelAll();
             notifyid = 0;
             showNotification(text);
         }
         if (status == 1) {
-            text = "Status: OPEN";
+            text = "P-Space just opened!";
             mNM.cancel(0);
             notifyid = 1;
             showNotification(text);
@@ -148,7 +166,7 @@ public class StatusService extends IntentService {
         intentUpdate.putExtra(EXTRA_KEY_UPDATE, status);
         sendBroadcast(intentUpdate);
 
-        if(!isForeground("com.pspace.gr")){
+        if(!isForeground("com.pspace.gr")&&notificationState){
 
         Bitmap icon = BitmapFactory.decodeResource(getApplicationContext().getResources(),
                 R.drawable.ic_launcher);
