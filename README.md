@@ -1,15 +1,23 @@
-#P-Space Status Changer Android App
+#P-Space Status Android App
 ----------------------------------
 
-This Android App changes P-Space's Status from an Android Phone.
+An Android application that shows info about P-Space's Status and the events 
+of who opens the door from [Uberdust](https://github.com/Uberdust/webapp/wiki).
 
 Details
 -------
-P-Space Status is handled by a php script hosted at: [http://p-space.gr](http://p-space.gr/ "P-Space.gr")
-
 We can change the status with these commands:
 
 Open : http://www.p-space.gr/.../set.php?open <br />
 Close: http://www.p-space.gr/.../set.php?close <br />
 
-The App checks the current Status of P-Space and by pressing a button changes it to the opposite state.
+Features
+--------
+
+- See and change the status
+- See when and who entered the space
+- Notifications
+
+__IMPORTANT!!!__ If you are testing, make sure to Enable Test Mode from Settings.
+
+[Download](https://www.dropbox.com/s/fvq6hq55vdd1m6a/pspace.apk) the latest version.
