@@ -12,16 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18b079f9-4353-491c-85ed-f72761a10d79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-hdpi/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-hdpi-v11/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-mdpi/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-mdpi-v11/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-xhdpi/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-xhdpi-v11/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-xxhdpi/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-xxhdpi-v11/ic_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-hdpi/ic_contact_picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-mdpi/ic_contact_picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/res/drawable-xhdpi/ic_contact_picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/BootReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/pspace/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java" afterPath="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java" afterPath="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml" afterPath="$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml" afterPath="$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pspace/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/pspace/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="p-space-android-app-tsagi.iws" />
@@ -89,17 +89,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="61" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="2940">
+            <state line="129" column="65" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="3045">
               <folding>
-                <element signature="e#2777#2904#0" expanded="true" />
-                <element signature="e#2893#2894#0" expanded="true" />
-                <element signature="e#3793#3826#0" expanded="true" />
-                <element signature="e#3859#3888#0" expanded="true" />
-                <element signature="e#6196#6226#0" expanded="true" />
-                <element signature="e#6329#6359#0" expanded="true" />
-                <element signature="e#6450#6483#0" expanded="true" />
-                <element signature="e#6611#6644#0" expanded="true" />
-                <element signature="e#6707#6745#0" expanded="true" />
+                <element signature="e#3874#3907#0" expanded="true" />
+                <element signature="e#3940#3969#0" expanded="true" />
+                <element signature="e#6277#6307#0" expanded="true" />
+                <element signature="e#6410#6440#0" expanded="true" />
+                <element signature="e#6531#6564#0" expanded="true" />
+                <element signature="e#6692#6725#0" expanded="true" />
+                <element signature="e#6788#6826#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,10 +106,43 @@
       <file leaf-file-name="UberdustParserFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UberdustParserFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="70" selection-start="4508" selection-end="4508" vertical-scroll-proportion="0.0" vertical-offset="1873" max-vertical-offset="2567">
+            <state line="135" column="36" selection-start="4280" selection-end="4280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatusService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="202" column="4" selection-start="6362" selection-end="6766" vertical-scroll-proportion="0.0" vertical-offset="2113" max-vertical-offset="2790">
+              <folding>
+                <element signature="e#2163#2211#0" expanded="true" />
+                <element signature="e#2261#2305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="door_list_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="52" selection-start="573" selection-end="573" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pspace/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="53" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,73 +165,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pspace/src/main/res/menu/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="65" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding>
-                <marker date="1378757137000" expanded="true" signature="87:102" placeholder="&quot;Test URL&quot;" />
-                <marker date="1378757137000" expanded="true" signature="102:225" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preferences.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="preferences.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="25" selection-start="486" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+            <state line="26" column="40" selection-start="898" selection-end="898" vertical-scroll-proportion="0.5760709" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatusService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java">
+      <file leaf-file-name="BootReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/BootReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="35" selection-start="5459" selection-end="5459" vertical-scroll-proportion="0.55686855" vertical-offset="1828" max-vertical-offset="2505">
-              <folding>
-                <element signature="e#2147#2195#0" expanded="true" />
-                <element signature="e#2245#2289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pspace/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="29" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-15.555555" vertical-offset="0" max-vertical-offset="630">
-              <folding>
-                <element signature="e#502#523#0" expanded="true" />
-                <element signature="e#898#921#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="door_list_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml">
-          <provider editor-type-id="text-editor">
-            <state line="27" column="4" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+            <state line="21" column="5" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
               <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/JSONParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="66" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1260">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -519,20 +497,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pspace/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/res/drawable/button_background_selector.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UberdustParser.java" />
         <option value="$PROJECT_DIR$/pspace/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/JSONParser.java" />
-        <option value="$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UserSettingActivity.java" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/SetPreferenceActivity.java" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/PrefsFragment.java" />
-        <option value="$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UberdustParserFragment.java" />
+        <option value="$PROJECT_DIR$/pspace/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/BootReceiver.java" />
+        <option value="$PROJECT_DIR$/pspace/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java" />
+        <option value="$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml" />
+        <option value="$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java" />
+        <option value="$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml" />
       </list>
     </option>
   </component>
@@ -672,216 +652,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi-v11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi-v11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi-v11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p-space-android-app-tsagi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -934,8 +704,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pspace/src/main/res" />
+      <recent name="$PROJECT_DIR$/pspace/src/main/res/drawable-xhdpi" />
+      <recent name="$PROJECT_DIR$/pspace/src/main/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/pspace/src/main/res/drawable-hdpi" />
+      <recent name="$PROJECT_DIR$/pspace/src/main/res" />
       <recent name="$PROJECT_DIR$/pspace/src/main/res/drawable" />
     </key>
   </component>
@@ -1065,6 +837,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -1093,12 +870,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-549" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.75208336" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.734375" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1113,8 +890,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13713981" sideWeight="0.734375" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.265625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13713981" sideWeight="0.734375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.265625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1163,33 +940,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="31" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="3960">
-          <folding>
-            <element signature="e#2777#2904#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#3793#3826#0" expanded="true" />
-            <element signature="e#3859#3888#0" expanded="true" />
-            <element signature="e#6196#6226#0" expanded="true" />
-            <element signature="e#6329#6359#0" expanded="true" />
-            <element signature="e#6450#6483#0" expanded="true" />
-            <element signature="e#6611#6644#0" expanded="true" />
-            <element signature="e#6707#6745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2505">
-          <folding>
-            <element signature="e#2147#2195#0" expanded="true" />
-            <element signature="e#2245#2289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pspace/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="22" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="630">
@@ -1200,13 +950,6 @@
     <entry file="file://$PROJECT_DIR$/pspace/src/main/res/drawable/button_background_selector.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="40" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
@@ -1240,14 +983,37 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml">
-      <provider editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="80" selection-start="657" selection-end="657" vertical-scroll-proportion="0.22451994" vertical-offset="58" max-vertical-offset="750">
+          <folding>
+            <element signature="e#778#796#0" expanded="true" />
+            <element signature="e#937#955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="65" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694">
+          <folding>
+            <element signature="e#125#148#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/BootReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="53" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/SetPreferenceActivity.java">
@@ -1257,38 +1023,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml">
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UberdustParserFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="486" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <folding />
+        <state line="135" column="36" selection-start="4280" selection-end="4280" vertical-scroll-proportion="0.0" vertical-offset="1873" max-vertical-offset="2567">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/menu/main.xml">
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="65" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694">
+        <state line="202" column="4" selection-start="6362" selection-end="6766" vertical-scroll-proportion="0.0" vertical-offset="2113" max-vertical-offset="2790">
           <folding>
-            <marker date="1378757137000" expanded="true" signature="87:102" placeholder="&quot;Test URL&quot;" />
-            <marker date="1378757137000" expanded="true" signature="102:225" placeholder="..." />
+            <element signature="e#2163#2211#0" expanded="true" />
+            <element signature="e#2261#2305#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="61" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="2940">
+        <state line="129" column="65" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="3045">
           <folding>
-            <element signature="e#2777#2904#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#3793#3826#0" expanded="true" />
-            <element signature="e#3859#3888#0" expanded="true" />
-            <element signature="e#6196#6226#0" expanded="true" />
-            <element signature="e#6329#6359#0" expanded="true" />
-            <element signature="e#6450#6483#0" expanded="true" />
-            <element signature="e#6611#6644#0" expanded="true" />
-            <element signature="e#6707#6745#0" expanded="true" />
+            <element signature="e#3874#3907#0" expanded="true" />
+            <element signature="e#3940#3969#0" expanded="true" />
+            <element signature="e#6277#6307#0" expanded="true" />
+            <element signature="e#6410#6440#0" expanded="true" />
+            <element signature="e#6531#6564#0" expanded="true" />
+            <element signature="e#6692#6725#0" expanded="true" />
+            <element signature="e#6788#6826#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/layout/door_list_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="52" selection-start="573" selection-end="573" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/PrefsFragment.java">
@@ -1298,22 +1074,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/UberdustParserFragment.java">
+    <entry file="file://$PROJECT_DIR$/pspace/src/main/res/xml/preferences.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="70" selection-start="4508" selection-end="4508" vertical-scroll-proportion="0.0" vertical-offset="1873" max-vertical-offset="2567">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pspace/src/main/java/com/pspace/gr/StatusService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="35" selection-start="5459" selection-end="5459" vertical-scroll-proportion="0.55686855" vertical-offset="1828" max-vertical-offset="2505">
-          <folding>
-            <element signature="e#2147#2195#0" expanded="true" />
-            <element signature="e#2245#2289#0" expanded="true" />
-          </folding>
+        <state line="26" column="40" selection-start="898" selection-end="898" vertical-scroll-proportion="0.5760709" vertical-offset="0" max-vertical-offset="780">
+          <folding />
         </state>
       </provider>
     </entry>

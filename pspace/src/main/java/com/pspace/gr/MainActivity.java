@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,8 +34,7 @@ import java.io.InputStreamReader;
 public class MainActivity extends Activity {
 
     int status;
-    boolean notificationState;
-    boolean testMenu;
+    boolean testMode;
 
     TextView textStatus;
 
@@ -51,6 +51,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getActionBar().setTitle("Status");
+
         textStatus = (TextView)findViewById(R.id.textStatus);
 
         //Start MyIntentService
@@ -113,7 +116,10 @@ public class MainActivity extends Activity {
     public void StatusSelect(){ //uses a switch to control if change
         //status-button results to on or off
         String url;
-        if(testMenu)
+
+        loadPref();
+
+        if(testMode)
             url = getString(R.string.testpspaceurl);
         else
             url = getString(R.string.pspaceurl);
@@ -216,4 +222,8 @@ public class MainActivity extends Activity {
         return (cm.getActiveNetworkInfo() != null);
     }
 
+    private void loadPref(){
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        testMode = mySharedPreferences.getBoolean("test_preference", false);
+    }
 }

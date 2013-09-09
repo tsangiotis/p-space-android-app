@@ -9,6 +9,12 @@
             android:title="Enable notifications"
             android:summary="Nofify when P-Space opens or closes" />
 
+        <CheckBoxPreference
+            android:key="notification_select_preference"
+            android:dependency="notification_preference"
+            android:title="Notify only on open"
+            android:summary="Nofify when P-Space opens"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -17,6 +23,7 @@
         <EditTextPreference
             android:key="count_preference"
             android:title="Number of events showing"
+            android:defaultValue="count_preference"
             android:summary="Choose the amount size of the door events showing"
             android:inputType="number"
             android:dialogTitle="Number of events showing" />
@@ -24,12 +31,16 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Test">
+        android:title="Misc">
 
         <CheckBoxPreference
             android:key="test_preference"
             android:title="Enable Test Mode"
             android:summary="Switch between /status and /statustest" />
+        <CheckBoxPreference
+            android:key="boot_preference"
+            android:title="Enable service on boot"
+            android:summary="Check P-Space's status without having to open the app after boot" />
 
     </PreferenceCategory>
 
