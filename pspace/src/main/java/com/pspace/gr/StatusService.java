@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.http.AndroidHttpClient;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
@@ -69,7 +70,7 @@ public class StatusService extends IntentService {
     }
 
     public void checkStatus(){
-        restorePreferences();
+        loadPref();
         AndroidHttpClient client = AndroidHttpClient
                 .newInstance("pspace_android");
         HttpGet request;
@@ -119,13 +120,6 @@ public class StatusService extends IntentService {
         }
     }
 
-    private void restorePreferences(){
-        settings = getSharedPreferences(
-                "com.pspace.gr", Context.MODE_PRIVATE);
-        notificationState = settings.getBoolean("NOTIF", true);
-        testMenu = settings.getBoolean("TEST", false);
-    }
-
     public boolean isForeground(String myPackage){
         ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         List< ActivityManager.RunningTaskInfo > runningTaskInfo = manager.getRunningTasks(1);
@@ -149,7 +143,7 @@ public class StatusService extends IntentService {
         }
         if (status == 1) {
             text = "P-Space just opened!";
-            mNM.cancel(0);
+            mNM.cancelAll();
             notifyid = 1;
             showNotification(text);
         }
@@ -184,5 +178,12 @@ public class StatusService extends IntentService {
 
         mNM.notify(notifyid, notification);
         }
+    }
+
+    private void loadPref(){
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        notificationState = mySharedPreferences.getBoolean("notification_preference", true);
+        testMenu = mySharedPreferences.getBoolean("test_preference", false);
     }
 }

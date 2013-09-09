@@ -27,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UserSettingActivity" />
+        <activity android:name=".SetPreferenceActivity" />
+
         <service android:name=".StatusService" />
     </application>
 

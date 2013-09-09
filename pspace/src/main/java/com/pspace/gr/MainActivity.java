@@ -1,6 +1,8 @@
 package com.pspace.gr;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -42,6 +44,7 @@ public class MainActivity extends Activity {
     String close = " <font color='#EE0000'>Closed</font>!";
     String open= " <font color='#22b327'>Open</font>!";
 
+
     private SharedPreferences settings;
 
     @Override
@@ -50,11 +53,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         textStatus = (TextView)findViewById(R.id.textStatus);
 
-        restorePreferences();
-
         //Start MyIntentService
         Intent statusIntent = new Intent(this, StatusService.class);
         startService(statusIntent);
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        UberdustParserFragment fragment = new UberdustParserFragment();
+        ft.replace(R.id.list, fragment);
+        ft.commit();
 
         myBroadcastReceiver = new MyBroadcastReceiver();
         myBroadcastReceiver_Update = new MyBroadcastReceiver_Update();
@@ -79,21 +87,6 @@ public class MainActivity extends Activity {
 
     }
 
-    private void restorePreferences(){
-        settings = getSharedPreferences(
-                "com.pspace.gr", Context.MODE_PRIVATE);
-        notificationState = settings.getBoolean("NOTIF", true);
-        testMenu = settings.getBoolean("TEST", false);
-
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem test = menu.findItem(R.id.testmenu);
-        test.setChecked(testMenu);
-        return super.onPrepareOptionsMenu(menu);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -106,49 +99,16 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.notif:
-                if(notificationState){
-                    disableNotifications();
-                    item.setIcon(R.drawable.ic_menu_end_conversation);
-                }
-                else{
-                    enableNotifications();
-                    item.setIcon(R.drawable.ic_menu_notifications);
-                }
-                return true;
-            case R.id.testmenu:
-                testMenu ^=true;
-                if(testMenu)
-                    item.setChecked(true);
-                else
-                    item.setChecked(false);
-                saveTest();
+            case R.id.settings:
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, SetPreferenceActivity.class);
+                startActivityForResult(intent, 0);
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    private void enableNotifications() {
-        SharedPreferences.Editor editor = settings.edit();
-        notificationState = true;
-        editor.putBoolean("NOTIF", notificationState);
-        editor.commit();
-    }
-
-    private void disableNotifications() {
-        SharedPreferences.Editor editor = settings.edit();
-        notificationState = false;
-        editor.putBoolean("NOTIF", notificationState);
-        editor.commit();
-    }
-
-    private void saveTest() {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("TEST", testMenu);
-        editor.commit();
-    }
-
 
     public void StatusSelect(){ //uses a switch to control if change
         //status-button results to on or off
