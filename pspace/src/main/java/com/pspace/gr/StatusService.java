@@ -163,7 +163,7 @@ public class StatusService extends IntentService {
         if(!isForeground("com.pspace.gr")&&notificationState){
 
         Bitmap icon = BitmapFactory.decodeResource(getApplicationContext().getResources(),
-                R.drawable.ic_launcher);
+                R.drawable.ic_icon);
         // Set the icon, scrolling text and timestamp
 
         Notification notification = new Notification.Builder(getApplicationContext())
@@ -172,7 +172,7 @@ public class StatusService extends IntentService {
                 .setDefaults(Notification.DEFAULT_SOUND)
                 .setAutoCancel(true)
                 .setOnlyAlertOnce(true)
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.ic_icon)
                 .setLargeIcon(icon)
                 .build();
 
