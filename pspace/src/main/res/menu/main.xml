@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/notif"
-        android:icon="@drawable/ic_menu_notifications"
-        android:title="@string/notif_onoff"
-        android:showAsAction="always" />
+    <item android:id="@+id/settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
 
 </menu>
