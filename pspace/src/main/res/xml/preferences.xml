@@ -23,7 +23,7 @@
         <EditTextPreference
             android:key="count_preference"
             android:title="Number of events showing"
-            android:defaultValue="count_preference"
+            android:defaultValue="10"
             android:summary="Choose the amount size of the door events showing"
             android:inputType="number"
             android:dialogTitle="Number of events showing" />

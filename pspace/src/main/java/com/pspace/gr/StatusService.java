@@ -12,7 +12,9 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.http.AndroidHttpClient;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
@@ -173,18 +175,29 @@ public class StatusService extends IntentService {
                 R.drawable.ic_icon);
         // Set the icon, scrolling text and timestamp
 
-        Notification notification = new Notification.Builder(getApplicationContext())
-                .setContentTitle("P-Space")
-                .setContentText(text)
-                .setDefaults(Notification.DEFAULT_SOUND)
-                .setAutoCancel(true)
-                .setOnlyAlertOnce(true)
-                .setSmallIcon(R.drawable.ic_icon)
-                .setLargeIcon(icon)
-                .setContentIntent(pendingIntent)
-                .build();
+            if (Build.VERSION.SDK_INT >= 11){
+                Notification notification;
+                notification = new Notification.Builder(getApplicationContext())
+                    .setContentTitle("P-Space")
+                    .setContentText(text)
+                    .setDefaults(Notification.DEFAULT_ALL)
+                    .setAutoCancel(true)
+                    .setOnlyAlertOnce(true)
+                    .setSmallIcon(R.drawable.ic_icon)
+                    .setLargeIcon(icon)
+                    .setContentIntent(pendingIntent)
+                    .build();
 
-        mNM.notify(notifyid, notification);
+                mNM.notify(notifyid, notification);
+            }
+            else{
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
+                        getApplicationContext())
+                        .setSmallIcon(R.drawable.ic_icon)
+                        .setContentTitle("P-Space")
+                        .setContentText(text);
+                mNM.notify(notifyid,mBuilder.build());
+            }
         }
     }
 
@@ -199,7 +212,6 @@ public class StatusService extends IntentService {
 
     private void loadPref(){
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
         notificationState = mySharedPreferences.getBoolean("notification_preference", true);
         notificationSelect = mySharedPreferences.getBoolean("notification_select_preference", false);
         testMenu = mySharedPreferences.getBoolean("test_preference", false);

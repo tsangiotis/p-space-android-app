@@ -1,10 +1,10 @@
 package com.pspace.gr;
 
-import android.app.ListFragment;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 /**
  * Created by tsagi on 9/9/13.
  */
-public class UberdustParserFragment extends ListFragment{
+public class UberdustParserFragment extends ListFragment {
 
     public static UberdustParserFragment newInstance() {
         return new UberdustParserFragment();
@@ -53,16 +53,19 @@ public class UberdustParserFragment extends ListFragment{
 
     // contacts JSONArray
     JSONArray readings = null;
+    ListAdapter adapter;
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         loadPref();
+
         uberurl = "http://uberdust.cti.gr/rest/testbed/5/node/urn:pspace:door/capability/urn:node:capability:card/json/limit/" + count;
         Log.d("url", uberurl);
-        new ParseDoorData().execute(uberurl);
+        if(!count.equals("0"))
+            new ParseDoorData().execute(uberurl);
 
-
+        super.onActivityCreated(savedInstanceState);
     }
 
     private class ParseDoorData extends AsyncTask<String, Void, Void> {
@@ -80,8 +83,9 @@ public class UberdustParserFragment extends ListFragment{
             JSONObject json = jParser.getJSONFromUrl(uberurl);
 
             //FIXME
-            if (json==null)
+            if (json==null){
                 return null;
+            }
 
             try {
                 // Getting Array of Readings
@@ -114,6 +118,7 @@ public class UberdustParserFragment extends ListFragment{
 
                     // adding HashList to ArrayList
                     doorList.add(map);
+
                 }
 
             }catch (JSONException e) {
@@ -127,8 +132,7 @@ public class UberdustParserFragment extends ListFragment{
             /**
              * Updating parsed JSON data into ListView
              * */
-
-            ListAdapter adapter = new SimpleAdapter(getActivity(), doorList,
+             adapter = new SimpleAdapter(getActivity().getApplicationContext(), doorList,
                     R.layout.door_list_fragment,
                     new String[] { TAG_TIME, TAG_STRING_READING }, new int[] {
                     R.id.timestamp, R.id.member });

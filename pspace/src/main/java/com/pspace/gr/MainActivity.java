@@ -1,8 +1,5 @@
 package com.pspace.gr;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +10,9 @@ import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     int status;
     boolean testMode;
@@ -51,8 +51,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getActionBar().setTitle("Status");
+        getSupportActionBar().setTitle("Status");
 
         textStatus = (TextView)findViewById(R.id.textStatus);
 
@@ -60,12 +59,14 @@ public class MainActivity extends Activity {
         Intent statusIntent = new Intent(this, StatusService.class);
         startService(statusIntent);
 
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
+        if(savedInstanceState == null){
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
 
-        UberdustParserFragment fragment = new UberdustParserFragment();
-        ft.replace(R.id.list, fragment);
-        ft.commit();
+            UberdustParserFragment fragment = new UberdustParserFragment();
+            ft.replace(R.id.list, fragment);
+            ft.commit();
+        }
 
         myBroadcastReceiver = new MyBroadcastReceiver();
         myBroadcastReceiver_Update = new MyBroadcastReceiver_Update();
@@ -87,7 +88,6 @@ public class MainActivity extends Activity {
                 StatusSelect();
             }
         });
-
     }
 
     @Override
