@@ -163,10 +163,10 @@ pip-log.txt
 .DS_Store
 
 # My stuff
-pspace.apk
-.idea/
-.gradle/
-local.properties
-gradlew
-gradlew.bat
-pspace/build/
+#pspace.apk
+#.idea/
+#.gradle/
+#local.properties
+#gradlew
+#gradlew.bat
+#pspace/build/

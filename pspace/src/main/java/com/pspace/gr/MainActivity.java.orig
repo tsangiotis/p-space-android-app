@@ -1,5 +1,8 @@
 package com.pspace.gr;
 
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +13,6 @@ import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,10 +31,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     int status;
+<<<<<<< .merge_file_ZusblP
+    boolean notificationState;
+=======
     boolean testMode;
+>>>>>>> .merge_file_X0Uo03
 
     TextView textStatus;
 
@@ -47,14 +51,12 @@ public class MainActivity extends ActionBarActivity {
 
     private SharedPreferences settings;
 
-    FragmentManager fm = getSupportFragmentManager();
-    FragmentTransaction ft = fm.beginTransaction();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Status");
+
+        getActionBar().setTitle("Status");
 
         textStatus = (TextView)findViewById(R.id.textStatus);
 
@@ -62,8 +64,12 @@ public class MainActivity extends ActionBarActivity {
         Intent statusIntent = new Intent(this, StatusService.class);
         startService(statusIntent);
 
-        if(savedInstanceState == null)
-            startFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        UberdustParserFragment fragment = new UberdustParserFragment();
+        ft.replace(R.id.list, fragment);
+        ft.commit();
 
         myBroadcastReceiver = new MyBroadcastReceiver();
         myBroadcastReceiver_Update = new MyBroadcastReceiver_Update();
@@ -85,20 +91,24 @@ public class MainActivity extends ActionBarActivity {
                 StatusSelect();
             }
         });
+
+    }
+
+<<<<<<< .merge_file_ZusblP
+    private void restorePreferences(){
+        settings = getSharedPreferences(
+                "com.pspace.gr", Context.MODE_PRIVATE);
+        notificationState = settings.getBoolean("NOTIF", true);
+
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        startFragment();
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        return super.onPrepareOptionsMenu(menu);
     }
 
-    public void startFragment(){
-        UberdustParserFragment fragment = new UberdustParserFragment();
-        ft.replace(R.id.list, fragment);
-        ft.commit();
-    }
-
+=======
+>>>>>>> .merge_file_X0Uo03
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -111,17 +121,49 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+<<<<<<< .merge_file_ZusblP
+            case R.id.notif:
+                if(notificationState){
+                    disableNotifications();
+                    item.setIcon(R.drawable.ic_menu_end_conversation);
+                }
+                else{
+                    enableNotifications();
+                    item.setIcon(R.drawable.ic_menu_notifications);
+                }
+=======
             case R.id.settings:
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, SetPreferenceActivity.class);
                 startActivityForResult(intent, 0);
 
+>>>>>>> .merge_file_X0Uo03
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+<<<<<<< .merge_file_ZusblP
+    private void enableNotifications() {
+        SharedPreferences.Editor editor = settings.edit();
+        notificationState = true;
+        editor.putBoolean("NOTIF", notificationState);
+        editor.commit();
+    }
+
+    private void disableNotifications() {
+        SharedPreferences.Editor editor = settings.edit();
+        notificationState = false;
+        editor.putBoolean("NOTIF", notificationState);
+        editor.commit();
+    }
+
+    public void StatusSelect(){ //uses a switch to control if change
+        //status-button results to on or off
+        String url;
+        url = getString(R.string.pspaceurl);
+=======
     public void StatusSelect(){ //uses a switch to control if change
         //status-button results to on or off
         String url;
@@ -132,6 +174,7 @@ public class MainActivity extends ActionBarActivity {
             url = getString(R.string.testpspaceurl);
         else
             url = getString(R.string.pspaceurl);
+>>>>>>> .merge_file_X0Uo03
 
         switch (status){
             case 0:
